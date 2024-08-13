@@ -1,3 +1,4 @@
-import createHomePage from "./homepage";
+import createHomePage from "./js/homepage";
+import "./css/main.css";
 
 createHomePage();

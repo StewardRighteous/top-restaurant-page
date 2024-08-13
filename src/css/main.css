@@ -1,0 +1,42 @@
+:root{
+    --main-color: rgb(30, 32, 30);
+    --main-color-2:rgb(60, 61, 55);
+    --secondary-color:rgb(105, 117, 101);
+    --secondary-color-2:rgb(236, 223, 204);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-color);
+}
+
+header{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--main-color-2);
+}
+
+nav button{
+    width: 6rem;
+    height: 2.5rem;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    box-shadow: 3px 4px 5px #121212;
+    background-color: white;
+    color: var(--main-color);
+    
+}
+
+nav button.outline{
+    border: 2px solid black;
+    font-size: medium;
+    font-weight: bold;
+}

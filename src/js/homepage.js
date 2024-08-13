@@ -1,5 +1,5 @@
-import cookingDoughImage from "./img/cooking-dough.jpg"
-import "./css/homepage.css";
+import cookingDoughImage from "../img/cooking-dough.jpg"
+import "../css/homepage.css";
 
 export default function createHomePage() {
     // creating elements
@@ -53,6 +53,4 @@ export default function createHomePage() {
         locationHeading,
         locationAddress,
     );
-
-
 }
