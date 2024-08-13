@@ -37,11 +37,13 @@ export default function createHomePage() {
     const content = document.querySelector("div#content");
 
     // divs for styling
+    const homePageContainer = document.createElement("div");
     const welcomeImageContainer = document.createElement("div");
     const welcomeMessageContainer = document.createElement("div");
     const operatingHoursContainer = document.createElement("div");
     const locationAddressContainer = document.createElement("div");
 
+    homePageContainer.className = "homepage";
     welcomeImageContainer.className = "welcome-image";
     welcomeMessageContainer.className = "welcome-message";
     operatingHoursContainer.className = "operating-hours";
@@ -60,9 +62,10 @@ export default function createHomePage() {
     welcomeMessageContainer.append(restaurantName, welcomeMessage);
     operatingHoursContainer.append(operatingHoursHeading, operatingHoursList);
     locationAddressContainer.append(locationHeading,locationAddress);
-    content.append(welcomeImageContainer,
+    homePageContainer.append(welcomeImageContainer,
         welcomeMessageContainer,
         operatingHoursContainer,
         locationAddressContainer,
     );
+    content.append(homePageContainer);
 }

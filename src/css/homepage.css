@@ -1,4 +1,4 @@
-#content{
+.homepage{
     display: grid;
     grid-template-columns: 28rem 35rem;
     grid-template-rows: 15rem repeat(2, 10rem);
@@ -15,7 +15,6 @@
     grid-area: img;
     display: flex;
     justify-content: center;
-    
 }
 
 .welcome-image img{
