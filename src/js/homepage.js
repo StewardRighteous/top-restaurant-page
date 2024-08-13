@@ -19,16 +19,16 @@ export default function createHomePage() {
 
     // Adding information to elements
     restaurantImage.src = cookingDoughImage;
-    restaurantName.textContent = "Welcome to Flavours and Flames !";
+    restaurantName.textContent = "Welcome to 🍪Flavours & Flames🔥!";
     welcomeMessage.textContent = `Where culinary artistry meets warm hospitality. Whether you’re here for a casual meal or a special celebration,
             our kitchen is dedicated to bringing you flavors that delight and inspire. From our signature dishes to our
             seasonal specialties, each plate is crafted with passion and served with pride. Join us for an unforgettable
             dining experience.`;
-    operatingHoursHeading.textContent = "Operating Hours";
+    operatingHoursHeading.textContent = "⏰Operating Hours🗓️";
     workingHourMainDays.textContent = "Monday - Friday: 11:00 AM - 10:00 PM";
     workingHourSaturday.textContent = "Saturday: 10:00 AM - 11:00 PM";
     workingHourSunday.textContent = "Sunday: 10:00 AM - 9:00 PM";
-    locationHeading.textContent = "Our Location";
+    locationHeading.textContent = "📍Our Location🗺️";
     addressLine1.textContent = "Flavours and Flames";
     addressLine2.textContent = "123 Culinary Street,"
     addressLine3.textContent = "Gourmet City."
@@ -36,6 +36,17 @@ export default function createHomePage() {
     // Selecting Main Content Section
     const content = document.querySelector("div#content");
 
+    // divs for styling
+    const welcomeImageContainer = document.createElement("div");
+    const welcomeMessageContainer = document.createElement("div");
+    const operatingHoursContainer = document.createElement("div");
+    const locationAddressContainer = document.createElement("div");
+
+    welcomeImageContainer.className = "welcome-image";
+    welcomeMessageContainer.className = "welcome-message";
+    operatingHoursContainer.className = "operating-hours";
+    locationAddressContainer.className = "location-address";
+   
     // Adding everything to content page
     operatingHoursList.append(workingHourMainDays, 
         workingHourSaturday, 
@@ -45,12 +56,13 @@ export default function createHomePage() {
         addressLine2,
         addressLine3
     );
-    content.append(restaurantImage,
-        restaurantName,
-        welcomeMessage,
-        operatingHoursHeading,
-        operatingHoursList,
-        locationHeading,
-        locationAddress,
+    welcomeImageContainer.appendChild(restaurantImage);
+    welcomeMessageContainer.append(restaurantName, welcomeMessage);
+    operatingHoursContainer.append(operatingHoursHeading, operatingHoursList);
+    locationAddressContainer.append(locationHeading,locationAddress);
+    content.append(welcomeImageContainer,
+        welcomeMessageContainer,
+        operatingHoursContainer,
+        locationAddressContainer,
     );
 }

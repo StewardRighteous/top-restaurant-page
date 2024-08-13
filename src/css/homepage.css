@@ -1,4 +1,80 @@
-img{
-    height: 200px;
-    width: 200px;
+#content{
+    display: grid;
+    grid-template-columns: 28rem 35rem;
+    grid-template-rows: 15rem repeat(2, 10rem);
+    grid-template-areas: 
+    "img welcome"
+    "img hours"
+    "img location";
+    justify-content: center;
+    padding: 5rem;
+    gap: 1rem;
+}
+
+.welcome-image{
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.welcome-image img{
+    height: 65vh;
+    border-radius: 1rem;
+    box-shadow: -10px -5px 5px black;
+    outline: 2px solid black;
+    border: 10px solid rgb(73, 72, 72);
+}
+
+.welcome-message,
+.operating-hours,
+.location-address{
+    grid-area: welcome;
+    outline: 2px solid black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 8px 5px black;
+}
+
+.welcome-message{
+    display: grid;
+    grid-template-rows: 3rem 8rem;
+    align-content: center;
+}
+
+.welcome-message h1,
+.operating-hours h2,
+.location-address h2{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.welcome-message p,
+.operating-hours ul li,
+.location-address ul li{
+    font-size: medium;
+    text-align: left;
+    color:rgb(0, 0, 0, 0.8);
+    line-break: strict;
+    text-align: center;
+}
+
+.operating-hours,
+.location-address{
+    grid-area: hours;
+    display: grid;
+    grid-template-rows: 2.5rem 5rem;
+    align-content: center;
+    justify-items: center ;
+}
+
+.operating-hours ul li,
+.location-address ul li{
+    list-style: none;
+    text-align: center;
+}
+
+.location-address{
+    grid-area: location;
 }
