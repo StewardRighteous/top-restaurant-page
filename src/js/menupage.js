@@ -2,14 +2,24 @@ import foodDisplayImageOne from "../img/food1.jpg";
 import foodDisplayImageTwo from "../img/food2.jpg";
 import foodDisplayImageThree from "../img/food3.jpg";
 import menuList from "./menuList";
+import "../css/menupage.css";
 
 export default function createMenuPage(){
      // Containers for menu sections
+     const menupage = document.createElement("div");
      const sampleImagesContainer = document.createElement("div");
      const appetizerContainer = document.createElement("div");
      const mainCourseContainer = document.createElement("div");
      const dessertContainer = document.createElement("div");
      const beveragesContainer = document.createElement("div");
+
+    // Container classes for styling
+     menupage.className = "menupage";
+     sampleImagesContainer.className = "sample-menu-images";
+     appetizerContainer.className = "appetizers";
+     mainCourseContainer.className = "main-courses";
+     dessertContainer.className = "desserts"
+     beveragesContainer.className = "beverages"
 
     // creating elements
     const foodImage1 = document.createElement("img");
@@ -40,7 +50,7 @@ export default function createMenuPage(){
 
         foodName.textContent = food.name;
         foodDescription.textContent = food.description;
-        foodPrice.textContent = food.price;
+        foodPrice.textContent = "$" + food.price;
 
         foodDetailList.append(foodName, foodDescription, foodPrice);
         container.appendChild(foodDetailList);
@@ -61,7 +71,8 @@ export default function createMenuPage(){
     
     // Selecting Main Content Section
     const content = document.querySelector("#content");
-
+ 
     // Adding everything to content section
-    content.append(sampleImagesContainer, menuHeading, appetizerContainer, mainCourseContainer, dessertContainer, beveragesContainer);
+    menupage.append(sampleImagesContainer, menuHeading, appetizerContainer, mainCourseContainer, dessertContainer, beveragesContainer);
+    content.appendChild(menupage);
 }

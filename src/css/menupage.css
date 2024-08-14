@@ -1,0 +1,127 @@
+.menupage{
+    display: grid;
+    grid-template-columns: 28rem 35rem;
+    grid-template-rows: 4rem ;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "menu-img menu-heading"
+    "menu-img appetizers" 
+    "menu-img main-courses"
+    "menu-img desserts" 
+    "menu-img beverages";
+    justify-content: center;
+    padding: 5rem;
+    gap: 1.5rem;
+}
+
+.sample-menu-images{
+    grid-area: menu-img;
+    display: grid;
+    height: 53rem;
+}
+
+.sample-menu-images img{
+    height: 280px;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: -15px 20px 11px black;
+    outline: 2px solid black;
+    border: 10px solid rgb(73, 72, 72);
+}
+
+.sample-menu-images img:first-child{
+    transform: rotate(358deg);
+}
+
+.sample-menu-images img:nth-child(2){
+    transform: rotate(0deg);
+}
+
+.sample-menu-images img:last-child{
+    transform: rotate(359deg);
+}
+
+.menupage h1,
+.appetizers,
+.main-courses,
+.desserts,
+.beverages{
+    outline: 2px solid black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 8px 5px black;
+}
+
+.menupage h1{
+    grid-area: menu-heading;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    align-self: center;
+    padding: 0;
+    color: var(--main-color);
+}
+
+.appetizers,
+.main-courses,
+.beverages,
+.desserts{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+
+.appetizers h2,
+.main-courses h2,
+.beverages h2,
+.desserts h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color-2);
+    font-size: 1.7rem;
+}
+
+.appetizers ul,
+.beverages ul,
+.main-courses ul,
+.desserts ul{
+    display:  grid;
+    grid-template-columns: 0.8fr 1.5fr 0.5fr;
+    list-style: none;
+    color: rgb(14, 13, 13, 0.9);
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.appetizers ul li:first-child,
+.beverages ul li:first-child,
+.main-courses ul li:first-child,
+.desserts ul li:first-child{
+    color: black;
+    font-weight: bold;
+}
+
+.appetizers ul li:last-child,
+.beverages ul li:last-child,
+.main-courses ul li:last-child,
+.desserts ul li:last-child{
+    justify-self: flex-end;
+}
+
+.appetizers{
+    grid-area: appetizers;                                                                                                                                                                                                                                                                                              
+}
+
+.main-courses{
+    grid-area: main-courses;
+}
+
+.desserts{
+    grid-area: desserts;
+}
+
+.beverages{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    grid-area: beverages;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
