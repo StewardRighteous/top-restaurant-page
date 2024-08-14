@@ -13,10 +13,13 @@
 
 body{
     background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: 4rem 1fr 3rem;
+    min-height: 100vh;
 }
 
-header{
-    height: 4rem;
+header, 
+footer{
     display: flex;
     justify-content: center;
     padding: 1rem;
@@ -39,4 +42,8 @@ nav button.outline{
     border: 2px solid black;
     font-size: medium;
     font-weight: bold;
+}
+
+footer{
+    color: white;
 }
