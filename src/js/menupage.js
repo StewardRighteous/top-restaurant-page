@@ -1,6 +1,8 @@
 import foodDisplayImageOne from "../img/food1.jpg";
 import foodDisplayImageTwo from "../img/food2.jpg";
 import foodDisplayImageThree from "../img/food3.jpg";
+import foodDisplayImageFour from "../img/restaurant-food.jpg";
+import foodDisplayImageFive from "../img/friends-in-restaurant.jpg";
 import menuList from "./menuList";
 import "../css/menupage.css";
 
@@ -25,6 +27,8 @@ export default function createMenuPage(){
     const foodImage1 = document.createElement("img");
     const foodImage2 = document.createElement("img");
     const foodImage3 = document.createElement("img");
+    const foodImage4 = document.createElement("img");
+    const foodImage5 = document.createElement("img");
     const menuHeading = document.createElement("h1");
     const appetizersHeading = document.createElement("h2");
     const mainCourseHeading = document.createElement("h2");
@@ -35,6 +39,8 @@ export default function createMenuPage(){
     foodImage1.src = foodDisplayImageOne;
     foodImage2.src = foodDisplayImageTwo;
     foodImage3.src = foodDisplayImageThree;
+    foodImage4.src = foodDisplayImageFour;
+    foodImage5.src = foodDisplayImageFive;
     menuHeading.textContent = "Menu";
     appetizersHeading.textContent = "Appetizers";
     mainCourseHeading.textContent = "Main Course";
@@ -57,7 +63,7 @@ export default function createMenuPage(){
     }
 
     // Adding elements to their respective containers
-    sampleImagesContainer.append(foodImage1, foodImage2, foodImage3);   
+    sampleImagesContainer.append(foodImage1, foodImage2, foodImage3, foodImage4, foodImage5);   
     appetizerContainer.appendChild(appetizersHeading);
     mainCourseContainer.appendChild(mainCourseHeading);
     dessertContainer.appendChild(dessertsHeading);

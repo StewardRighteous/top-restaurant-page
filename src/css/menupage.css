@@ -29,17 +29,14 @@
     border: 10px solid rgb(73, 72, 72);
 }
 
-.sample-menu-images img:first-child{
-    transform: rotate(358deg);
+.sample-menu-images img:nth-child(2n+1){
+    transform: rotate(359deg);
 }
 
-.sample-menu-images img:nth-child(2){
+.sample-menu-images img:nth-child(2n){
     transform: rotate(0deg);
 }
 
-.sample-menu-images img:last-child{
-    transform: rotate(359deg);
-}
 
 .menupage h1,
 .appetizers,
