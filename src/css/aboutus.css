@@ -1,0 +1,66 @@
+.about-us{
+    display: grid;
+    grid-template-columns: repeat(2,23rem);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "about-us about-us"
+        "about-welcome about-welcome" 
+        "our-story our-philosophy"
+        "meet-the-team join-us";
+    justify-content: center;
+    padding: 5rem;
+    gap: 1rem;
+}
+
+.about-us h1,
+.about-welcome,
+.our-story,
+.our-philosophy,
+.meet-the-team,
+.join-us{
+    outline: 2px solid black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 8px 5px black;
+}
+
+.about-us h1{
+    grid-area: about-us;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem;
+    align-self: center;
+    padding: 0;
+    color: var(--main-color);
+}
+
+.about-welcome,
+.our-story,
+.our-philosophy,
+.meet-the-team,
+.join-us{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.about-welcome{
+    grid-area: about-welcome;
+}
+
+.our-story{
+    grid-area: our-story;
+}
+
+.our-philosophy{
+    grid-area: our-philosophy;
+}
+
+.meet-the-team{
+    grid-area: meet-the-team;
+}
+
+.join-us{
+    grid-area: join-us;
+}

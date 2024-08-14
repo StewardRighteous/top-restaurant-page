@@ -1,3 +1,5 @@
+import "../css/aboutus.css";
+
 export default function createAboutPage() {
     // Creating elements
     const aboutUsHeading = document.createElement("h1");
@@ -15,11 +17,20 @@ export default function createAboutPage() {
     const joinUsParagraph = document.createElement("p");
 
     // divs for different section
+    const aboutUsContainer = document.createElement("div");
     const welcomeContainer = document.createElement("div");
     const ourStoryContainer = document.createElement("div");
     const ourPhilosophyContainer = document.createElement("div");
     const meetTheTeamContainer = document.createElement("div");
     const joinUsContainer = document.createElement("div");
+
+    // naming divs for styling
+    aboutUsContainer.className = "about-us";
+    welcomeContainer.className = "about-welcome";
+    ourStoryContainer.className = "our-story";
+    ourPhilosophyContainer.className = "our-philosophy";
+    meetTheTeamContainer.className = "meet-the-team";
+    joinUsContainer.className = "join-us";
 
     // Adding content to elements
     aboutUsHeading.textContent = "About Us";
@@ -59,11 +70,12 @@ export default function createAboutPage() {
     ourPhilosophyContainer.append(ourPhilosophyHeading, ourPhilosophyParagraph1, ourPhilosophyParagraph2);
     meetTheTeamContainer.append(meetTheTeamHeading, meetTheTeamParagraph);
     joinUsContainer.append(joinUsHeading, joinUsParagraph);
-    content.append(aboutUsHeading,
+    aboutUsContainer.append(aboutUsHeading,
         welcomeContainer,
         ourPhilosophyContainer,
         ourStoryContainer,
         meetTheTeamContainer,
         joinUsContainer,
     );
+    content.appendChild(aboutUsContainer);
 }
